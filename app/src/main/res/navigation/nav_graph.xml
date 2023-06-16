@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactListFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.contactsaccess.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_createAssetFragment"
+            app:destination="@id/createAssetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.example.contactsaccess.Contact.ContactListFragment"
+        android:label="fragment_contact_list"
+        tools:layout="@layout/fragment_contact_list" >
+
+        <action
+            android:id="@+id/action_contactListFragment_to_contactDetailFragment"
+            app:destination="@id/contactDetailFragment" />
+        <action
+            android:id="@+id/action_contactListFragment_to_createAssetFragment"
+            app:destination="@id/createAssetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="com.example.contactsaccess.Contact.ContactDetailFragment"
+        android:label="ContactDetailFragment" >
+
+        <action
+            android:id="@+id/action_contactDetailFragment_to_contactListFragment"
+            app:destination="@id/contactListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createAssetFragment"
+        android:name="com.example.contactsaccess.Asset.CreateAssetFragment"
+        android:label="CreateAssetFragment" >
+
+        <action
+            android:id="@+id/action_createAssetFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:textAlignment="viewStart"
+    android:background="#DAE7FB">
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/contact_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinner_assets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="Piso interesado" />
+
+    <EditText
+        android:id="@+id/edit_max_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio máximo" />
+
+    <EditText
+        android:id="@+id/edit_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notas" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#82BF7A"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="wrap_content"
+        android:layout_height="99dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#82BF7A"
+        android:text="Contactar"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="30dp"
+        app:icon="@android:drawable/stat_sys_phone_call"
+        tools:ignore="RtlCompat" />
+
+
+
+</LinearLayout>

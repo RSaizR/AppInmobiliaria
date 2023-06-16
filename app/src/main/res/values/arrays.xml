@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="asset_types">
+        <item>Cochera</item>
+        <item>Solar</item>
+        <item>Ático</item>
+        <item>Piso</item>
+        <item>Casa</item>
+        <item>Chalet</item>
+    </string-array>
+</resources>

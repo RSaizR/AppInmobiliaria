@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Contact.ContactListFragment">
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#B2E8B5"
+            android:backgroundTint="#B6DAB8"
+            android:hint="Buscar..."
+            android:imeOptions="actionDone"
+            android:padding="8dp"
+            android:singleLine="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#DAE7FB" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/floating_button"
+        android:layout_width="88dp"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        android:backgroundTint="#82BF7A"
+        android:elevation="6dp"
+        android:src="@android:drawable/ic_menu_add" />
+
+</FrameLayout>
