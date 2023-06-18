@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_contactListFragment_to_createAssetFragment"
             app:destination="@id/createAssetFragment" />
+        <action
+            android:id="@+id/action_contactListFragment_self"
+            app:destination="@id/contactListFragment" />
     </fragment>
 
     <fragment

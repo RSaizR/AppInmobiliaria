@@ -31,6 +31,9 @@ import android.widget.TextView;
 
 import com.example.contactsaccess.R;
 
+
+
+
 public class ContactListFragment extends Fragment {
 
     private RecyclerView recyclerView;
@@ -46,17 +49,20 @@ public class ContactListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contact_list, container, false);
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
 
         // Solicitar permiso READ_CONTACTS si no está concedido
         if (ContextCompat.checkSelfPermission(this.getContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this.getActivity(), new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_READ_CONTACTS);
         } else {
             // Permiso READ_CONTACTS concedido
-            loadContactList(view);
+            loadContactList(getView());
         }
-            // Permiso READ_CONTACTS concedido
-
-        return view;
     }
 
     @Override
@@ -176,7 +182,6 @@ public class ContactListFragment extends Fragment {
                 }
             });
         }
-
 
         @Override
         public int getItemCount() {
