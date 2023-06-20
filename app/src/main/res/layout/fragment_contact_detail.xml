@@ -47,7 +47,7 @@
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#82BF7A"
+        android:backgroundTint="#3A7133"
         android:text="Guardar" />
 
     <Button
@@ -55,10 +55,10 @@
         android:layout_width="wrap_content"
         android:layout_height="99dp"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="#82BF7A"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#3A7133"
         android:text="Contactar"
         android:textAlignment="viewStart"
-        android:layout_marginTop="30dp"
         app:icon="@android:drawable/stat_sys_phone_call"
         tools:ignore="RtlCompat" />
 

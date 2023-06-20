@@ -208,7 +208,6 @@ public class ContactDetailFragment extends Fragment {
         if (selectedAssetIndex != -1 && selectedAssetIndex < assetsList.size()) {
             // Obtener el activo seleccionado del spinner
             String selectedAsset = String.valueOf(assetsList.get(selectedAssetIndex).getId());
-            System.out.println("IHRWJFEOAK" + assetsList.get(selectedAssetIndex).getId());
             // Obtener los valores de los campos de texto
             TextView nameTextView = requireView().findViewById(R.id.contact_name);
             TextView phoneTextView = requireView().findViewById(R.id.contact_phone_number);
@@ -241,7 +240,7 @@ public class ContactDetailFragment extends Fragment {
                 Toast.makeText(requireContext(), "Contacto actualizado exitosamente", Toast.LENGTH_SHORT).show();
             } else {
                 // El contacto no existe, crea uno nuevo y guárdalo en la base de datos
-                Contact newContact = new Contact(name, phoneNumber, maxPrice, notes, selectedAsset);
+                Contact newContact = new Contact(name, phoneNumber, selectedAsset, maxPrice, notes);
                 newContact.setFloorInterested(String.valueOf(selectedAssetIndex));
                 appDatabase.saveContact(newContact);
 

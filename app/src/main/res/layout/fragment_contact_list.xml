@@ -36,7 +36,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:background="@android:color/white"
-        android:backgroundTint="#82BF7A"
+        android:backgroundTint="#3A7133"
         android:elevation="6dp"
         android:src="@android:drawable/ic_menu_add" />
 
